@@ -21,3 +21,43 @@ font-family: 'Playfair Display', serif;
 padding: 20px;
 background-color: var(--secondary);
 }
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    padding-bottom: 5px;
+    border-bottom: 3px solid var(--primary);
+}
+header nav a {
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 4px;
+}
+nav a.active{
+    background: var(--primary);
+}
+p{
+    margin: 20px 0;
+}
+.container{
+    max-width: 1200px;
+    margin: 40px auto;
+}
+main{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.help-layout nav{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+    
+
+}
