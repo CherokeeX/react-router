@@ -1,3 +1,23 @@
-.active {
-    color : red
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display&display=swap');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+:root{
+    --primary: #feb236;
+    --secondary: #6b5b95;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+padding: 20px;
+background-color: var(--secondary);
 }

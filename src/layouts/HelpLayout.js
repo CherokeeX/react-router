@@ -6,7 +6,7 @@ export const HelpLayout = ()=>{
         <h1>Help
         </h1>
 
-        <p> Lorem kmflmfklsmasma'mvflkvmavmalvmm</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident iusto sequi totam nam suscipit aliquid doloremque dignissimos magnam optio in!</p>
 <nav>
     <NavLink to ='contacts' >Contacts</NavLink>
     <NavLink to ='askme' >FAQ</NavLink>
