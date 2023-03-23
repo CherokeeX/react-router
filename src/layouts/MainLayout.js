@@ -3,7 +3,7 @@ export  const MainLayout = () => {
 
     return (
         <div className="main-layout">
-            <header>
+            <header className="container">
                 <h1> React Router </h1>
                 <nav>
             <NavLink to='/'>Home</NavLink>
@@ -13,9 +13,9 @@ export  const MainLayout = () => {
              </nav>
 
             </header>
-            <main>
+            <main className="container">
                 <Outlet />
-            </main>
+            </main >
         </div>
     );
 }   
