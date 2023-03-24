@@ -107,3 +107,8 @@ form button {
     background: var(--primary);
     cursor: pointer;
 }
+
+.xxx .card {
+    display: flex;
+    justify-content: space-between;
+}
