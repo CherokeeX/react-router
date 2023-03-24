@@ -6,6 +6,8 @@ import { About } from './pages/about';
 import { HelpLayout } from './layouts/HelpLayout';
 import { Contacts } from './pages/help/Contacts';
 import { AskMe } from './pages/help/Askme';
+import { usersLoader,Users } from './pages/Users';
+
 function App() {
 
 const router = createBrowserRouter([
@@ -21,11 +23,12 @@ const router = createBrowserRouter([
         children :[
           {path: 'contacts' , element: <Contacts />},
         {path: 'askMe' , element:<AskMe />}        ]
-      }
+      },
+      { path: 'users', element : <Users /> , loader: usersLoader }
     ]
   
-  },
-  
+  }
+
 
 ])
  
