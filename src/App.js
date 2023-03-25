@@ -5,7 +5,7 @@ import { Home } from './pages/home';
 import { About } from './pages/about';
 import { HelpLayout } from './layouts/HelpLayout';
 import { UsersLayout} from './layouts/UsersLayout';
-import { Contacts } from './pages/help/Contacts';
+import { Contacts , contactAction } from './pages/help/Contacts';
 import { AskMe } from './pages/help/Askme';
 import { usersLoader,Users } from './pages/Users';
 import { UserDetails } from './pages/UserDetails';
@@ -24,8 +24,8 @@ const router = createBrowserRouter([
         path: 'help',
         element : <HelpLayout />,
         children :[
-          {path: 'contacts' , element: <Contacts />},
-        {path: 'askMe' , element:<AskMe />}        ]
+          {path: 'contacts' , element: <Contacts />, action : contactAction},
+        {path: 'askMe' , element:<AskMe />} ]
       },
       {path:'/users',
       element: <UsersLayout />,
