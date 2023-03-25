@@ -26,8 +26,17 @@ const router = createBrowserRouter([
           {path: 'contacts' , element: <Contacts />},
         {path: 'askMe' , element:<AskMe />}        ]
       },
-      { path: 'users', element : <Users /> , loader: usersLoader },
-      {path : 'users/:userid' , element: <UserDetails/> , loader : UserDetailsLoader}
+      {path:'/users',
+      children:[
+      { index : true, element : <Users /> , loader: usersLoader },
+      {path : ':userid' , element: <UserDetails/> , loader : UserDetailsLoader}
+
+      ]
+
+      }
+
+      
+      
     ]
   
   }

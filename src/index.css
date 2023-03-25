@@ -117,3 +117,13 @@ form button {
 .xxx .card a {
   font-size: 30px;
 }
+
+.user-details{
+    padding : 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.user-details ul {
+    padding: 30px;
+}
