@@ -4,6 +4,7 @@ import { MainLayout } from './layouts/MainLayout';
 import { Home } from './pages/home';
 import { About } from './pages/about';
 import { HelpLayout } from './layouts/HelpLayout';
+import { UsersLayout} from './layouts/UsersLayout';
 import { Contacts } from './pages/help/Contacts';
 import { AskMe } from './pages/help/Askme';
 import { usersLoader,Users } from './pages/Users';
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
         {path: 'askMe' , element:<AskMe />}        ]
       },
       {path:'/users',
+      element: <UsersLayout />,
       children:[
       { index : true, element : <Users /> , loader: usersLoader },
       {path : ':userid' , element: <UserDetails/> , loader : UserDetailsLoader}
