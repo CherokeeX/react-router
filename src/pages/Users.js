@@ -4,11 +4,11 @@ export const Users =()=> {
  const users =useLoaderData();
     return(
         <div className="xxx">
-            {users.map(user=>(<div className="card">
+            {users.map(user=>(<div className="card"  key={user.id}>
             <h3> 
                 <i className="fa-solid fa-caret-right"></i>{user.name} 
             </h3>
-           <Link to={user.id.toString()} key={user.id}>
+           <Link to={user.id.toString()}>
             <i className="fa-regular fa-square-caret-right"></i>
            </Link>
             </div> ))}

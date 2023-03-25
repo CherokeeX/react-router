@@ -8,7 +8,7 @@ export const Contacts = ()=>{
             <Form method="post" action="/help/contacts">
                 <div>
                     <label htmlFor="email">e-mail : </label>
-                    <input type="email" name="email" />
+                    <input type="text" name="email" />
                 </div>
                 <div>
                     <label htmlFor="message">Message : </label>
@@ -21,12 +21,24 @@ export const Contacts = ()=>{
     );
  
 }
-
 export const contactAction = async({request})=> {
 
-const result = await request.formData();
-console.log(result.get('email'));
-console.log(result.get('message'));
+const data = await request.formData();
+const email = data.get('email');
+const message = data.get('message');
+const errors = {};
+if (typeof email !== 'string' || !email.includes('@')){
+
+    errors.email = 'Enter your Email';    
+}
+if (typeof message !=='string' || message.length <10){
+
+    errors.message =' Please use  min 10 characters';
+}
+if(Object.keys(errors).length){
+    return errors;
+}
+
 return redirect ('/help');
 
 }
