@@ -127,3 +127,9 @@ form button {
 .user-details ul {
     padding: 30px;
 }
+
+.errors{
+    color: red;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.3);
+}

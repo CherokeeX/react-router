@@ -9,12 +9,12 @@ const errors =useActionData();
                 <div>
                     <label htmlFor="email">e-mail : </label>
                     <input type="text" name="email" />
-                    {errors?.email && <span>{errors.email}</span>}
+                    {errors?.email && <p className="errors">{errors.email}</p>}
                 </div>
                 <div>
                     <label htmlFor="message">Message : </label>
                     <textarea name="message"></textarea>
-                    {errors?.message && <span>{errors.message}</span>}
+                    {errors?.message && <p className="errors">{errors.message}</p>}
                 </div>
                 
                 <button type="submit">submit</button>

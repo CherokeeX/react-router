@@ -26,5 +26,8 @@ const user = useLoaderData();
 export  const UserDetailsLoader = async({params})=>{
     const {userid} = params;
     const res =  await fetch('https://jsonplaceholder.typicode.com/users/'+ userid);
+    if(res.status === 404){
+        throw new Response ('Not Found page', {status : 404});
+    }
     return res.json();
 }

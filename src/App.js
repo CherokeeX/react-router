@@ -10,6 +10,8 @@ import { AskMe } from './pages/help/Askme';
 import { usersLoader,Users } from './pages/Users';
 import { UserDetails } from './pages/UserDetails';
 import {UserDetailsLoader} from './pages/UserDetails';
+import { NotFound } from './pages/NotFound';
+import { UsersError } from './pages/UsersError';
 
 function App() {
 
@@ -28,14 +30,15 @@ const router = createBrowserRouter([
         {path: 'askMe' , element:<AskMe />} ]
       },
       {path:'/users',
-      element: <UsersLayout />,
+      element: <UsersLayout />, errorElement: <UsersError/>,
       children:[
       { index : true, element : <Users /> , loader: usersLoader },
-      {path : ':userid' , element: <UserDetails/> , loader : UserDetailsLoader}
+      {path : ':userid' , element: <UserDetails/> , loader : UserDetailsLoader }
 
       ]
 
-      }
+      },
+      {path:'*', element: <NotFound/>}
 
       
       
