@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
 import { MainLayout } from './layouts/MainLayout';
 import { Home } from './pages/home';
 import { About } from './pages/about';
@@ -32,21 +31,14 @@ const router = createBrowserRouter([
       children:[
       { index : true, element : <Users /> , loader: usersLoader },
       {path : ':userid' , element: <UserDetails/> , loader : UserDetailsLoader }
-
       ]
-
       },
-      {path:'*', element: <NotFound/>}
-
-      
+      {path:'*', element: <NotFound/>}     
       
     ]
   
   }
-
-
 ])
-
 
 function App() {
 
