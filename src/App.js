@@ -13,8 +13,6 @@ import {UserDetailsLoader} from './pages/UserDetails';
 import { NotFound } from './pages/NotFound';
 import { UsersError } from './pages/UsersError';
 
-function App() {
-
 const router = createBrowserRouter([
   {
     path : '/' , element: <MainLayout />,
@@ -48,6 +46,10 @@ const router = createBrowserRouter([
 
 
 ])
+
+
+function App() {
+
  
   return (
   
